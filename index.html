@@ -21,9 +21,6 @@
             <img class="logo__icon" src="img/logo.svg" loading="lazy" alt="Логотип компании">
           </a>
         </div>
-        <div class="header__rect">
-          <img src="img/dots/rectangle.svg" alt="">
-        </div>
         <nav class="nav">
           <ul class="nav__list list-reset">
             <li class="nav__item"><a href="#" class="nav__link">
@@ -70,24 +67,29 @@
   <main class="main">
     <section class="hero">
       <div class="container-fluid">
+        <div class="header__rect">
+          <img src="img/dots/rectangle.svg" alt="">
+        </div>
         <div class="container">
           <div class="pages">
-            <ul class="pages list-reset">
-              <li class="page__item">Главная</li>
-              <li class="page__item page__item-active">Карьера</li>
-            </ul>
-            <div class="decor__hero">
-              <div class="rect-two decor__item">
-                <img src="img/dots/rectangle-two.svg" alt="rect">
-              </div>
-              <div class=" right decor__item">
-                <img src="img/dots/right.svg" alt="right">
-              </div>
-              <div class="circle decor__item">
-                <img src="img/dots/circle-hero.svg" alt="">
-              </div>
+            <p class="page list-reset">
+              <a class="page__item" href="#">Главная</a>
+              <a class="page__item page__item-active" href="#">Карьера</a>
+            </p>
+            <p class="lang">
+              <a class="page__lang" href="#">Русский</a>
+            </p>
+          </div>
+          <div class="decor__hero">
+            <div class="rect-two decor__item">
+              <img src="img/dots/rectangle-two.svg" alt="rect">
             </div>
-            <p class="page__lang">Русский</p>
+            <div class=" right decor__item">
+              <img src="img/dots/right.svg" alt="right">
+            </div>
+            <div class="circle decor__item">
+              <img src="img/dots/circle-hero.svg" alt="">
+            </div>
           </div>
           <div class="line-top">
             <img src="img/dots/line.svg" alt="line">
@@ -103,18 +105,12 @@
               <p class="hero__text">
                 Приходите и вы наверняка останетесь надолго!
               </p>
-              <div class="hero__link-items">
-                <div class="hero__link-item">
-                  <a class="open__link link" href="#">
-                    Перейти к вакансиям
-                  </a>
-                </div>
-                <div class="hero__link-item">
-                  <a class="link__skill link" href="#">
-                    Показать нам свое CV
-                  </a>
-                </div>
-              </div>
+               <a class=" hero__link open__link link" href="#">
+                Перейти к вакансиям
+               </a>
+               <a class=" hero__link link__skill link" href="#">
+                  Показать нам свое CV
+               </a>              
               <div class="line-bottom">
                 <img src="img/dots/line.svg" alt="line">
               </div>
@@ -506,7 +502,6 @@
           </ul>
         </div>
       </div>
-
     </div>
   </footer>
 </body>
