@@ -849,10 +849,11 @@ body {
 }
 
 
-@media screen and (max-width: 36rem) {
+@media screen and (max-width: 460px) {
  .container,
  .container-fluid {
    width: 100%;
+   padding: 0 2rem;
  }
 
  body {
@@ -956,6 +957,10 @@ body {
    display: none;
  }
 
+ .hero__box {
+   width: 24rem;
+ }
+
  .circle__items {
    position: absolute;
    top: 0;
@@ -1024,19 +1029,12 @@ body {
    height: 194rem;
  }
 
- .open__vacancy-items,
  .info__open {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  justify-content: center;     
+  align-items: center;
+  flex-direction: column;
  }
-
-
- .open__steps-item:not(:last-child) {
-  margin-bottom: 16rem;
- }
-
 
  .open__info {
    width: 100%;
@@ -1049,6 +1047,10 @@ body {
 
  .open__info-item:not(:last-child) {
    margin-bottom: 3rem;
+ }
+
+ .item-vacancy {
+   margin: 0 auto;
  }
 
  .partner__items {
