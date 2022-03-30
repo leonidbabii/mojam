@@ -30,6 +30,10 @@ span {
   margin: 0;
 }
 
+.mobile__nav {
+  display: none
+}
+
 .list-reset {
   list-style: none;
   margin: 0;
@@ -145,13 +149,14 @@ body {
 
 .header__inner {
   position: relative;
-  padding-top: 40px;
+  padding-top: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .header__rect {
+  z-index: 11;
   position: absolute;
   top: -1rem;
   left: 18rem;
@@ -308,9 +313,11 @@ body {
 }
 
 .hero__text {
+  font-weight: 300;
   font-size: 2.4rem;
   padding-bottom: 5.4rem;
 }
+
 
 .line-bottom {
   position: absolute;
@@ -575,7 +582,6 @@ body {
 .partner__items {
   display: flex;
   justify-content: space-around;
-  counter-reset: counter;
   padding-top: 5.6rem;
   margin-left: 15.2rem;
 }
@@ -593,15 +599,10 @@ body {
   margin-right: 2rem;
 }
 
-
-.partner__item::before {
-  content: "0"counter(counter);
-  counter-increment: counter;
-  position: absolute;
-  font-size: 30px;
-  line-height: 3.4rem;
+.partner__numb {
+  font-weight: 400;
+  font-size: 3rem;
   color: var(--border-color);
-  bottom: 24rem;
 }
 
 .partner__title {
@@ -799,7 +800,7 @@ body {
 
 .footer {
   background-color: var(--title-color);
-  height: 16.7rem;
+  height: 100vh;
 }
 
 .footer__box {
@@ -845,4 +846,231 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   color: #777;
+}
+
+
+@media screen and (max-width: 36rem) {
+ .container,
+ .container-fluid {
+   width: 100%;
+ }
+
+ body {
+   overflow-x: hidden;
+ }
+
+ .burger {
+   --burger-width: 3rem;
+   --burger-height: 3rem;
+   --burger-line-height: 0.4rem;
+   position: relative;
+   border: none;
+   padding: 0;
+   width: var(--burger-width);
+   height: var(--burger-height);
+   color: var(--light-color);
+   background-color: transparent;
+   cursor: pointer;
+ }
+
+ .burger::before,
+ .burger::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: var(--burger-line-height);
+   background-color: currentColor;
+   -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+   transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+   -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+ }
+
+ .burger::before {
+   top: 0;
+ }
+
+ .burger::after {
+   top: calc(100% - var(--burger-line-height));
+ }
+
+ .burger__line {
+   position: absolute;
+   left: 0;
+   top: 50%;
+   width: 100%;
+   height: var(--burger-line-height);
+   background-color: currentColor;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+   -webkit-transition: -webkit-transform 0.3s ease-in-out;
+   transition: -webkit-transform 0.3s ease-in-out;
+   -o-transition: transform 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+ }
+
+ .burger--active::before {
+   top: 50%;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+   -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+   transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+   -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+ }
+
+ .burger--active::after {
+   top: 50%;
+   -webkit-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+   -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+   transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+   -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+ }
+
+ .burger--active .burger__line {
+   -webkit-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: -webkit-transform 0.3s ease-in-out;
+   transition: -webkit-transform 0.3s ease-in-out;
+   -o-transition: transform 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+ }
+
+ .nav__list,
+ .social,
+ .decor__hero,
+ .pages,
+ .decor {
+   display: none;
+ }
+
+ .circle__items {
+   position: absolute;
+   top: 0;
+   right: 0;
+ }
+
+ .logo {
+   display: none;
+ }
+ 
+ .hero__wrapper {
+   padding-top: 20.9rem;
+ }
+
+ .header__inner {
+   padding-top: 3rem;
+   margin: 0;
+ }
+
+ .hero__link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .hero__link:not(:last-child) {
+   margin-bottom: 6rem;
+ }
+
+ .mobile__nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   padding-bottom: 1rem;
+ }
+
+ .lang__link {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height:1.2;
+  color: var(--text-color);
+  text-transform: uppercase;
+ }
+
+ .hero__title {
+   font-size: 3rem;
+ }
+
+ .hero__text {
+   font-size: 2rem;
+ }
+
+ .circle__item {
+   bottom: 7rem;
+   height: 10rem;
+ }
+
+ .container__vacancy,
+ .container-partner {
+   width: 100%;
+   padding: 0 2rem;
+ }
+
+ .team {
+   height: 194rem;
+ }
+
+ .open__vacancy-items,
+ .info__open {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+
+ .open__steps-item:not(:last-child) {
+  margin-bottom: 16rem;
+ }
+
+
+ .open__info {
+   width: 100%;
+   padding: 0 4rem;
+ }
+
+ .open__info-items {
+   flex-direction: column;
+ }
+
+ .open__info-item:not(:last-child) {
+   margin-bottom: 3rem;
+ }
+
+ .partner__items {
+   flex-direction: column;
+ }
+
+ .partner__text-items,
+ .text {
+   width: 100%;
+   margin: auto;
+ }
+
+ .partner__items {
+   margin: auto;
+ }
+
+ .partner__item:not(:last-child) {
+   margin-bottom: 2rem;
+ }
+
+ .footer__box {
+   flex-direction: column;
+ }
+
 }
