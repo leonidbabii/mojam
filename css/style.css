@@ -162,6 +162,11 @@ body {
   left: 18rem;
 }
 
+.mobile__decor,
+.mobile__item {
+  display: none;
+}
+
 
 .nav__list,
 .social {
@@ -385,7 +390,7 @@ body {
   height: 18rem;
   padding: 1.5rem .7rem;
   background: var(--item-color);
-  border-radius: 10px;
+  border-radius: 1rem;
   cursor: pointer;
   transition: border .4s ease-in-out;
   display: flex;
@@ -397,14 +402,9 @@ body {
   border: 0.2rem solid var(--active-color);
 }
 
-.open__vacancy-item:not(:last-child) {
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
 .item__vacancy-type {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: var(--type-color);
   padding-bottom: 3.2rem;
 }
@@ -678,7 +678,7 @@ body {
 
 .send__input {
   background-color: rgba(241, 241, 241, 0.05);
-  border: 1px solid var(--text-color);
+  border: 0.1rem solid var(--text-color);
   padding: 1.5rem;
   width: 18rem;
   color: var(--light-color);
@@ -700,7 +700,7 @@ body {
 }
 
 .load__title {
-  margin-left: 1px;
+  margin-left: 0.1rem;
   color: var(--active-color);
   cursor: pointer;
 }
@@ -734,7 +734,7 @@ body {
   width: 100%;
   height: 9rem;
   background-color: rgba(241, 241, 241, 0.05);
-  border: 1px solid var(--text-color);
+  border: 0.1rem solid var(--text-color);
   padding: 1.2rem;
   margin-bottom: 3rem;
   outline: none;
@@ -856,8 +856,8 @@ body {
    padding: 0 2rem;
  }
 
- body {
-   overflow-x: hidden;
+ .section {
+   padding-top: 5rem;
  }
 
  .burger {
@@ -961,10 +961,18 @@ body {
    width: 24rem;
  }
 
- .circle__items {
-   position: absolute;
-   top: 0;
+ .mobile__decor {
    right: 0;
+ }
+
+ .mobile__item {
+   left: 0;
+   bottom: 0;
+ }
+
+ .mobile__item,.mobile__decor {
+   display: block;
+   position: absolute;
  }
 
  .logo {
@@ -973,6 +981,11 @@ body {
  
  .hero__wrapper {
    padding-top: 20.9rem;
+   padding-left: 0;
+ }
+
+ .hero__inner {
+   padding-bottom: 6rem;
  }
 
  .header__inner {
@@ -1025,6 +1038,11 @@ body {
    padding: 0 2rem;
  }
 
+ .open__vacancy-item {
+   margin-right: 0;
+   margin-bottom: 2rem;
+ }
+
  .team {
    height: 194rem;
  }
@@ -1041,7 +1059,8 @@ body {
    padding: 0 4rem;
  }
 
- .open__info-items {
+ .open__info-items,
+ .open__vacancy-items {
    flex-direction: column;
  }
 
@@ -1049,8 +1068,16 @@ body {
    margin-bottom: 3rem;
  }
 
+ .open__vacancy-items {
+   margin-bottom: 8rem;
+ }
+
  .item-vacancy {
    margin: 0 auto;
+ }
+
+ .item-vacancy:not(:last-child) {
+   margin-bottom: 2rem;
  }
 
  .partner__items {
